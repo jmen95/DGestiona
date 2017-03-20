@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+     <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DGestiona</title>
+    <link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="css/theme.min.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/Styles.css" />
+</head>
+
+<body>
+
+    <div data-role="panel" id="outside" data-display="overlay" data-theme="b">
+        <ul data-role="listview" id="menuprincipal">
+            <li data-icon="back"><a href="#" data-rel="close">Salir</a></li>
+            <li><a href="#radicadoE">Radicado de entrada</a></li>
+            <li><a href="#radicadoS">Radicado de salida</a></li>
+            <li><a href="#asignados">Asignados</a></li>
+            <li><a href="#devueltos">Devueltos</a></li>
+            <li><a href="#consultaR">Consultar radicados</a></li>
+        </ul>
+    </div>
+
+    <div data-role="header" data-position="fixed" data-theme="b">
+        <img src="img/DGestiona.png" width="240" style="padding: 9px; margin-left:10%; float:left; display: inline-block;" />
+
+        <a href="#outside" data-icon="bullets" data-iconpos="notext" >Menu</a>
+          
+    </div><!-- /header -->
+
+
+
+    <!-- page  radicado entrada -->
+    <!-- page  radicado entrada -->
+    <!-- page  radicado entrada -->
+    <!-- page  radicado entrada-->
+    <!-- page  radicado entrada -->
+
+    <div data-role="page" id="radicadoE">
+
+
+
+        <div role="main" class="ui-content" id="radicadoE" >
+        <H2 >Nuevo radicado de entrada</H2>
+        <div data-role="navbar" id="tabheader" for="tabsre"  data-theme="b">
+            <ul>
+                <li><a href="#origen">ORIGEN</a></li>
+                <li><a href="#datos">DATOS</a></li>
+                <li><a href="#documentos">DOCUMENTOS</a></li>
+            </ul>
+        </div>
+
+        
+
+       
+    <!-- TAB DE ORIGEN .....TAB DE ORIGEN .....TAB DE ORIGEN .....TAB DE ORIGEN .....TAB DE ORIGEN .....TAB DE ORIGEN ..... -->
+    <div id="tabsre">
+        <div id="origen" class="tabcontent active">
+                 <h2>Datos iniciales</h2>
+
+             <form >
+                      
+                <div class="ui-field-contain">
+                    <select name="tipo_per" id="tipo_per" data-native-menu="false">
+                 
+                    </select>
+                </div>
+                   
+
+                <div class="ui-field-contain">
+                    <select name="tipo_documento_per" id="tipo_documento_per" data-native-menu="false">
+
+                    </select>
+                </div>
+
+                     <input type="search" name="documento_per" id="search-1" value="" placeholder="Indentificación"/>
+
+                 <button  data-theme="b" type="submit"  data-inline="true"  id="radicado">BUSCAR</button>
+                </center> 
+
+
+             </form>
+
+
+                  <h2>Datos personales</h2>
+                  <form id="persona_form_e">
+                      <div class="ui-field-contain">
+                             <label for="text-3">Nombre:</label>
+                             <input type="text" data-clear-btn="true" data-mini="true" name="nombre_per" id="nombre" value=""       placeholder="Nombre...">
+                    </div>
+                      <div class="ui-field-contain">
+
+                             <label for="text-3">Apellidos:</label>
+                             <input type="text" data-clear-btn="true" data-mini="true" name="priapellido_per" id="text-5" value=""       placeholder="Primer apellido...">
+                             <label for="text-3"></label>
+                             <input type="text" data-clear-btn="true" data-mini="true" name="segapellido_per" id="text-5" value=""       placeholder="Segundo apellido...">
+                    </div>
+                    <div class="ui-field-contain">
+
+                        <label for="number-2">Celular</label>
+               <input type="number" data-clear-btn="true" name="celular" pattern="[0-9]*"                      id="number-4" value="" placeholder="Celular...">
+                    </div>
+                      <div class="ui-field-contain">
+                        <label for="email-2">Email:</label>
+                        <input type="email" data-clear-btn="true" name="email_per" id="email-2" value="" placeholder="Email...">
+                    </div>
+                    <div class="ui-field-contain">
+                        <label for="url-2">Pagina web: </label>
+                        <input type="url" data-clear-btn="true" name="paginaweb_per" id="url-2" value="" placeholder="Url...">       
+                    </div>
+                                <label for="url-2">Ubicación</label>
+                    
+                    <div class="ui-field-contain">
+                        <label for="pais_per_e">Pais:</label>
+                        <select name="pais_per" id="pais_per" data-native-menu="false">
+                            <option value="">Seleccione...</option>
+                        </select>
+                    </div>
+
+                    <div class="ui-field-contain">
+                        <label for="estado_per">Departamento:</label>
+                        <select name="estado_per" id="estado_per" data-native-menu="false">
+                            <option value="">Seleccione...</option>
+                        </select>
+                    </div>
+                    <div class="ui-field-contain">
+                        <label for="municipio_per">Ciudad o Municipio:</label>
+                        <select name="municipio_per" id="municipio_per" data-native-menu="false">
+                                 <option value="">Seleccione...</option>
+
+                        </select>
+                    </div>
+
+                </form>
+                                    <br><br>
+                <center>
+                 <button data-theme="b" type="submit"  data-inline="true"  id="radicado">GUARDAR</button>
+                </center> 
+              
+            </div>
+
+
+
+    <!-- SEGUNDO TAB DE DATOS .....TAB DE DATOS ....TAB DE DATOS ....TAB DE DATOS ....TAB DE DATOS .... -->
+
+
+
+            <div id="datos" class="tabcontent">
+            <form id="datos_form_e">
+                 <h2>Datos radicados</h2>
+                <div class="ui-field-contain">
+                     <label for="date-2">Fecha de radicación</label>
+                     <input type="date" data-clear-btn="true" name="fecharad" id="date-2" value="">
+                </div>
+                      <div class="ui-field-contain">
+
+                             <label for="text-3">Codigo alternativo:</label>
+                             <input type="text" data-clear-btn="true" data-mini="true" name="codalternativo" id="text-5" value=""       placeholder="Nombre...">
+                    </div>
+                        <div class="ui-field-contain">
+                             <label for="date-3">Fecha del documento</label>
+                             <input type="date" data-clear-btn="true" name="fechadocumento" id="date-3" value="">
+                        </div>
+                      <div class="ui-field-contain">
+                             <label for="text-3">Asunto:</label>
+                             <input type="text" data-clear-btn="true" data-mini="true" name="asunto" id="text-5" value=""       placeholder="Asunto...">
+                    </div>
+                      <div class="ui-field-contain">
+                             <label for="text-3">Signatario:</label>
+                             <input type="text" data-clear-btn="true" data-mini="true" name="dignatario" id="text-5" value=""       placeholder="Signatario...">
+                    </div>
+                    <div class="ui-field-contain">
+
+                        <label for="number-2">Numero de folios</label>
+                        <input type="number" data-clear-btn="true" name="nfolios" pattern="[0-9]*" id="number-4" value=""
+                        placeholder="Numero de folios...">
+                    </div>
+                    <div class="ui-field-contain">
+
+                        <label for="number-2">Numero de anexos</label>
+                        <input type="number" data-clear-btn="true" name="numanexo" pattern="[0-9]*" id="number-4" value=""
+                        placeholder="Numero de anexos...">
+                    </div>
+
+                      <div class="ui-field-contain">
+                             <label for="text-3">Descripcion de anexos:</label>
+                             <input type="text" data-clear-btn="true" data-mini="true" name="descanexo" id="text-5" value=""       placeholder="Descripcion de anexos...">
+                    <label for="text-3"></label>
+                    <select name="medioenvrep_det" id="medioenvrep_det" data-native-menu="false">
+
+                    </select>
+                    </div>
+                    <div class="ui-field-contain">
+
+                            <label for="textarea-4">Descripcón:</label>
+                            <textarea data-mini="true" cols="40" rows="8" name="descripcion" id="textarea-4"></textarea>
+                    </div>
+
+                    <div class="ui-field-contain">
+                                <select  name="dependencia_dep" id="dependencia_dep" data-native-menu="false">
+                                     <option value="">Dependencia...</option>
+
+                                </select>
+                        </div>
+
+                    <div class="ui-field-contain">
+                             
+                                <select  name="serie_ser" id="serie_ser" data-native-menu="false">
+                                     <option value="">Serie...</option>
+                                </select>
+                     </div>
+                    <div class="ui-field-contain">
+                            
+                                <select  name="subserie_sub" id="subserie_sub" data-native-menu="false">
+                                       <option value="">Subseri...</option>
+
+                                </select>
+                            </div>
+                     <div class="ui-field-contain">
+
+                                <select  name="tipodocumental_tip" id="tipodocumental_tip" data-native-menu="false">
+                                    <option value="">Tipo Documental</option>
+
+                                </select> 
+                             </div>
+                     <div class="ui-field-contain">
+                                <select  name="dependenciaauxiliar_dep" id="dependenciaauxiliar_dep" data-native-menu="false">
+                                    <option value="">Dependencia AUX...</option>
+
+                                </select> 
+                             </div>
+                       <div class="ui-field-contain">
+                                <select name="usuarioauxiliar_usu" id="usuarioauxiliar_usu" data-native-menu="false">
+                                    <option value="">Destinatario auxiliar</option>
+                              
+                                </select> 
+                             </div>
+                        
+                </form>
+                                    <br><br>
+                <center>
+                 <button data-theme="b" type="submit"  data-inline="true"  id="radicado">GUARDAR</button>
+                </center> 
+</div>  <!--Fin de contenido de TAB 2....Fin de contenido de TAB 2....Fin de contenido de TAB 2....-->
+
+        
+
+                <!-- TAB DE DOCUMENTOS....TAB DE DOCUMENTOS....TAB DE DOCUMENTOS....TAB DE DOCUMENTOS....-->
+
+            <div id="documentos" class="tabcontent">
+               <label for="file-2">File:</label>
+               <input type="file" data-clear-btn="true" name="file-2" id="file-2" value="">
+            </div>
+    </div>
+            
+                
+
+        </div><!-- /content -->
+
+
+        <!-- /SEGUNDO RADICADO DE ENTRADA....SEGUNDO RADICADO DE ENTRADA....SEGUNDO RADICADO DE ENTRADA.... -->
+
+
+
+  </div><!-- Fin de radicado de entrada -->
+
+<!-- page  radicado salida -->
+<!-- page  radicado salida -->
+<!-- page  radicado salida -->
+<!-- page  radicado salida-->
+<!-- page  radicado salida -->
+
+
+<div data-role="page" id="radicadoS">
+
+
+        <div role="main" class="ui-content" >
+        <H2>Radicado de salida</H2>
+        <div data-role="navbar" id="tabheader" for="tabsrs">
+            <ul>
+                <li><a href="#origen">ORIGEN</a></li>
+                <li><a href="#datos">DATOS</a></li>
+                <li><a href="#documentos">DOCUMENTOS</a></li>
+            </ul>
+        </div>
+
+        
+
+       
+    <!-- TAB DE ORIGEN .....TAB DE ORIGEN .....TAB DE ORIGEN .....TAB DE ORIGEN .....TAB DE ORIGEN .....TAB DE ORIGEN ..... -->
+        <div id="tabsrs">
+
+            <div id="origen" class="tabcontent active">
+                 <h2>Datos iniciales</h2>
+                 <form>
+                <div class="ui-field-contain">
+                    <select name="tipo_per" id="tipo_per_s" data-native-menu="false">
+
+                    </select>
+                </div>
+                <div class="ui-field-contain">
+                    <select name="tipo_documento_per" id="tipo_documento_per_s" data-native-menu="false">
+
+                    </select>
+                </div>
+
+                     <input type="search" name="documento_per" id="search-1" value="" placeholder="Indentificación">
+                     <a href="#" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-right">Buscar</a>
+
+
+             </form>
+                  <h2>Datos del destinatario</h2>
+                  <form id="origen_form_s">
+                      <div class="ui-field-contain">
+
+                             <label for="text-3">Nombre:</label>
+                             <input type="text" data-clear-btn="true" data-mini="true" name="nombre_per" id="text-5" value=""       placeholder="Nombre...">
+                    </div>
+                      <div class="ui-field-contain">
+
+                             <label for="text-3">Apellidos:</label>
+                             <input type="text" data-clear-btn="true" data-mini="true" name="priapellido_per" id="text-5" value=""       placeholder="Prmer apellido...">
+                             <label for="text-3"></label>
+                             <input type="text" data-clear-btn="true" data-mini="true" name="segapellido_per" id="text-5" value=""       placeholder="Segundo apellido...">
+                    </div>
+                    <div class="ui-field-contain">
+
+                        <label for="number-2">Celular</label>
+                        <input type="number" data-clear-btn="true" name="telefono" pattern="[0-9]*" id="number-4" value=""
+                        placeholder="Celular...">
+                    </div>
+                      <div class="ui-field-contain">
+                        <label for="email-2">Email:</label>
+                        <input type="email" data-clear-btn="true" name="email-2" id="email_per" value="" placeholder="Email...">
+                    </div>
+                    <div class="ui-field-contain">
+                        <label for="url-2">Pagina web: </label>
+                        <input type="url" data-clear-btn="true" name="paginaweb_per" id="url-2" value="" placeholder="Url...">       </div>
+
+
+
+
+
+                     <div class="ui-field-contain">
+                                <label for="url-2">Ubicación</label>
+
+                    </div>
+                    <div class="ui-field-contain">
+                        <label for="pais_per_s">Pais:</label>
+                        <select name="pais_per" id="pais_per_s" data-native-menu="false">
+                            <option value="">Seleccione...</option>
+                        </select>
+                    </div>
+                    <div class="ui-field-contain">
+                        <label for="estado_per_s">Departamento:</label>
+                        <select name="estado_per" id="estado_per_s" data-native-menu="false">
+                            <option value="">Seleccione...</option>
+                        </select>
+                    </div>
+           
+                    <div class="ui-field-contain">
+                        <label for="municipio_per_s">Ciudad o Municipio:</label>
+                        <select name="municipio_per_s" id="municipio_per_s" data-native-menu="false">
+                             <option value="">Seleccione...</option>
+
+                        </select>
+                    </div>
+            </form>
+                                    <br><br>
+                <center>
+                 <button data-theme="b" type="submit"  data-inline="true"  id="radicado">GUARDAR</button>
+                </center> 
+                    
+            </div>
+
+
+
+    <!-- SEGUNDO TAB DE DATOS .....TAB DE DATOS ....TAB DE DATOS ....TAB DE DATOS ....TAB DE DATOS .... -->
+
+
+
+      <div id="datos" class="tabcontent">
+            <form id="datos_form_s">
+                 <h2>Datos radicados</h2>
+                <div class="ui-field-contain">
+                     <label for="date-2">Fecha de radicación</label>
+                     <input type="date" data-clear-btn="true" name="date-2" id="date-2" value="">
+                </div>
+                      <div class="ui-field-contain">
+
+                             <label for="text-3">Codigo alternativo:</label>
+                             <input type="text" data-clear-btn="true" data-mini="true" name="codalternativo" id="text-5" value=""       placeholder="Nombre...">
+                    </div>
+                        <div class="ui-field-contain">
+                             <label for="date-3">Fecha del documento</label>
+                             <input type="date" data-clear-btn="true" name="fechadocumento" id="date-3" value="">
+                        </div>
+                      <div class="ui-field-contain">
+                             <label for="text-3">Asunto:</label>
+                             <input type="text" data-clear-btn="true" data-mini="true" name="asunto" id="text-5" value=""       placeholder="Asunto...">
+                    </div>
+                      <div class="ui-field-contain">
+                             <label for="text-3">Signatario:</label>
+                             <input type="text" data-clear-btn="true" data-mini="true" name="dignatario" id="text-5" value=""       placeholder="Signatario...">
+                    </div>
+                    <div class="ui-field-contain">
+
+                        <label for="number-2">Numero de folios</label>
+                        <input type="number" data-clear-btn="true" name="nfolios" pattern="[0-9]*" id="number-4" value=""
+                        placeholder="Numero de folios...">
+                    </div>
+                    <div class="ui-field-contain">
+
+                        <label for="number-2">Numero de anexos</label>
+                        <input type="number" data-clear-btn="true" name="numanexo
+" pattern="[0-9]*" id="number-4" value=""
+                        placeholder="Numero de anexos...">
+                    </div>
+
+                      <div class="ui-field-contain">
+                             <label for="text-3">Descripcion de anexos:</label>
+                             <input type="text" data-clear-btn="true" data-mini="true" name="descanexo" id="text-5" value=""       placeholder="Descripcion de anexos...">
+                    <label for="text-3"></label>
+                    <select name="medioenvrep_det" id="medioenvrep_det_s" data-native-menu="false">
+
+                    </select>
+                    </div>
+                    <div class="ui-field-contain">
+
+                            <label for="textarea-4">Descripcón:</label>
+                            <textarea data-mini="true" cols="40" rows="8" name="descripcion" id="textarea-4"></textarea>
+                    </div>
+
+                    <div class="ui-field-contain">
+                                <select  name="dependencia_dep" id="dependencia_dep_s" data-native-menu="false">
+                                     <option value="">Dependencia...</option>
+
+                                </select>
+                        </div>
+
+                    <div class="ui-field-contain">
+                             
+                                <select  name="serie_ser" id="serie_ser_s" data-native-menu="false">
+                                     <option value="">Serie...</option>
+                                </select>
+                     </div>
+                    <div class="ui-field-contain">
+                            
+                                <select  name="subserie_sub" id="subserie_sub_s" data-native-menu="false">
+                                       <option value="">Subserie...</option>
+
+                                </select>
+                            </div>
+                     <div class="ui-field-contain">
+
+                                <select  name="tipodocumental_tip" id="tipodocumental_tip_s" data-native-menu="false">
+                                    <option value="">Tipo Documental</option>
+
+                                </select> 
+                             </div>
+                     <div class="ui-field-contain">
+                                <select  name="dependenciaauxiliar_dep" id="dependenciaauxiliar_dep_s" data-native-menu="false">
+                                    <option value="">Dependencia AUX...</option>
+
+                                </select> 
+                             </div>
+                       <div class="ui-field-contain">
+                                <select name="usuarioauxiliar_usu" id="usuarioauxiliar_usu_s" data-native-menu="false">
+                                    <option value="">Destinatario auxiliar</option>
+                              
+                                </select> 
+                             </div>
+            </form>
+                                    <br><br>
+                <center>
+                 <button data-theme="b" type="submit"  data-inline="true"  id="radicado">GUARDAR</button>
+                </center> 
+     </div>  <!-- fin D -->
+
+            <div id="documentos" class="tabcontent">
+                     <label for="file-2">File:</label>
+                     <input type="file" data-clear-btn="true" name="file-2" id="file-2" value="">
+         </div>
+             </div>
+                <br><br><br>
+
+        </div><!-- /content -->
+
+
+
+    </div><!-- /page -->
+
+
+
+<div data-role="page" id="asignados">
+
+
+<!--     <div data-role="header" data-position="fixed" data-theme="a">
+        <h1 >DGESTIONA</h1>
+        <a href="#outside" data-icon="bullets" data-iconpos="notext">Menu</a>
+
+    </div> --><!-- /header -->
+    <H1>Asignados</H1>
+
+    <div role="main" class="ui-content" >        
+    
+<div data-role="popup" id="popupLogin" data-theme="a" style="border-style:none;">
+<div data-role="header"  data-theme="a" >
+        <h1 >Informacion del radicado</h1>
+        <a href="#" data-icon="delete" data-rel="back" style="margin-left:93%; margin-top:0%;" data-iconpos="notext" ></a>
+
+    </div> 
+
+
+    <form>
+
+        <div style="padding:20px 30px;">
+        <div data-role="navbar" id="tabheader" for="tabsrs">  
+                <ul>
+                        <li><a href="#">REMITENTE</a></li> 
+                        <li><a href="#">INFORMACION</a></li>      
+                        <li><a href="#">MOVIMIENTOS</a></li>   
+                </ul>     
+       </div>
+                <H2>Datos del remitente</H2>
+                <label for="un" class="ui-hidden-accessible">Tipo de documento:</label>
+                <input type="text" name="user" id="un" value="" placeholder="Tipo de documento..." data-theme="a">  
+                <label for="pw" class="ui-hidden-accessible">Numero de documento:</label>
+                <input type="text" name="pass" id="pw" value="" placeholder="Numero de documento..." data-theme="a">
+                    <div class="ui-field-contain">
+
+                             <label for="text-3">Nombre:</label>
+                             <input type="text" data-clear-btn="true" data-mini="true" name="text-5" id="text-5" value=""       placeholder="Nombre...">
+                    </div>
+                      <div class="ui-field-contain">
+
+                             <label for="text-3">Apellidos:</label>
+                             <input type="text" data-clear-btn="true" data-mini="true" name="text-5" id="text-5" value=""       placeholder="Prmer apellido...">
+                             <label for="text-3"></label>
+                             <input type="text" data-clear-btn="true" data-mini="true" name="text-5" id="text-5" value=""       placeholder="Segundo apellido...">
+                    </div>
+                    <div class="ui-field-contain">
+
+                        <label for="number-2">Celular</label>
+                        <input type="number" data-clear-btn="true" name="number-4" pattern="[0-9]*" id="number-4" value=""
+                        placeholder="Celular...">
+                    </div>
+                      <div class="ui-field-contain">
+                        <label for="email-2">Email:</label>
+                        <input type="email" data-clear-btn="true" name="email-2" id="email-2" value="" placeholder="Email...">
+                    </div>
+                    <div class="ui-field-contain">
+                        <label for="url-2">Pagina web: </label>
+                        <input type="url" data-clear-btn="true" name="url-2" id="url-2" value="" placeholder="Url...">       </div>
+
+
+
+
+        </div>
+    </form>
+</div>
+
+    <table data-role="table" id="table-custom-2" data-mode="columntoggle" class="ui-body-a ui-shadow table-stripe ui-responsive" data-column-btn-theme="a" data-column-btn-text="Columnas" data-column-popup-theme="b">
+    <thead>
+      <tr class="ui-bar-a">
+        <th >Codigo</th>
+        <th data-priority="3">Estado</th>
+        <th data-priority="2">Asunto</th>
+        <th data-priority="1">Fecha radicacion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr >
+        <th><a href="#popupLogin" data-rel="popup">111111111111</a>   </th>
+        <td>1941</td>
+        <td>74</td>
+        <td>28/05/2016 12:20 PM</td>
+      </tr>
+          <tr>
+        <th>2</th>
+        <td>1942</td>
+        <td>64</td>
+        <td>28/05/2016 12:20 PM</td>
+      </tr>
+      <tr>
+        <th>3</th>
+        <td>1972</td>
+        <td>87</td>
+        <td>28/05/2016 12:20 PM</td>
+      </tr>
+      <tr>
+        <th>4</th>
+        <td>1939</td>
+        <td>87</td>
+        <td>28/05/2016 12:20 PM</td>
+      </tr>
+      <tr>
+        <th>5</th>
+        <td>1962</td>
+        <td>87</td>
+        <td>28/05/2016 12:20 PM</td>
+      </tr>
+      <tr>
+        <th>6</th>
+        <td>1964</td>
+        <td>74</td>
+        <td>28/05/2016 12:20 PM</td>
+      </tr>
+      <tr>
+        <th>7</th>
+        <td>1967</td>
+        <td>122</td>
+        <td>28/05/2016 12:20 PM</td>
+      </tr>
+      <tr>
+        <th>8</th>
+        <td>1939</td>
+        <td>72</td>
+        <td>28/05/2016 12:20 PM</td>
+      </tr>
+      <tr>
+        <th>9</th>
+        <td>1952</td>
+        <td>85</td>
+        <td>28/05/2016 12:20 PM</td>
+      </tr>
+      <tr>
+        <th>10</th>
+        <td>2010</td>
+        <td>78</td>
+        <td>28/05/2016 12:20 PM</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+        </div>
+
+
+</div>
+
+
+
+<div data-role="page" id="devueltos">
+
+
+<!--     <div data-role="header" data-position="fixed" data-theme="a">
+        <h1 >DGESTIONA</h1>
+        <a href="#outside" data-icon="bullets" data-iconpos="notext">Menu</a>
+
+    </div> --><!-- /header -->
+    <H1>Devueltos</H1>
+
+    <div role="main" class="ui-content" >        
+    
+
+    <table data-role="table" id="table-custom-2" data-mode="columntoggle" class="ui-body-a ui-shadow table-stripe ui-responsive" data-column-btn-theme="a" data-column-btn-text="Columnas" data-column-popup-theme="b">
+    <thead>
+      <tr class="ui-bar-a">
+        <th >Codigo</th>
+        <th data-priority="3">Estado</th>
+        <th data-priority="2">Asunto</th>
+        <th data-priority="1">Fecha radicacion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr >
+        <th><a href="#popupLogin" data-rel="popup">111111111111</a>   </th>
+        <td>1941</td>
+        <td>74</td>
+        <td>28/05/2016 12:20 PM</td>
+      </tr>
+          <tr>
+        <th>2</th>
+        <td>1942</td>
+        <td>64</td>
+        <td>28/05/2016 12:20 PM</td>
+      </tr>
+      <tr>
+        <th>3</th>
+        <td>1972</td>
+        <td>87</td>
+        <td>28/05/2016 12:20 PM</td>
+      </tr>
+      <tr>
+        <th>4</th>
+        <td>1939</td>
+        <td>87</td>
+        <td>28/05/2016 12:20 PM</td>
+      </tr>
+      <tr>
+        <th>5</th>
+        <td>1962</td>
+        <td>87</td>
+        <td>28/05/2016 12:20 PM</td>
+      </tr>
+      <tr>
+        <th>6</th>
+        <td>1964</td>
+        <td>74</td>
+        <td>28/05/2016 12:20 PM</td>
+      </tr>
+      <tr>
+        <th>7</th>
+        <td>1967</td>
+        <td>122</td>
+        <td>28/05/2016 12:20 PM</td>
+      </tr>
+      <tr>
+        <th>8</th>
+        <td>1939</td>
+        <td>72</td>
+        <td>28/05/2016 12:20 PM</td>
+      </tr>
+      <tr>
+        <th>9</th>
+        <td>1952</td>
+        <td>85</td>
+        <td>28/05/2016 12:20 PM</td>
+      </tr>
+      <tr>
+        <th>10</th>
+        <td>2010</td>
+        <td>78</td>
+        <td>28/05/2016 12:20 PM</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+        </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div data-role="page" id="consultaR">
+
+
+        <form id="radicado_form">
+                  <input type="text" data-clear-btn="true" data-mini="true" name="palabraClave" id="palabraClave" value="">
+
+                  <input type="hidden" name="Consulta" value="C">
+
+                <button type="submit" data-mini="true" data-inline="true"  id="radicado">Buscar</button>
+         </form>
+
+
+
+<div data-role="collapsibleset" data-content-theme="a" data-iconpos="right" id="padre">
+    
+</div>
+
+<div data-role="popup" id="popupPdf" data-theme="a" style="border-style:none; width: 100%;">
+    <div data-role="header"  data-theme="a" >
+        <h1 >Ver documento</h1>
+        <a href="#" data-icon="delete" data-rel="back" style="margin-left:93%; margin-top:0%;" data-iconpos="notext" ></a>
+
+    </div> 
+
+    <iframe src="http://docs.google.com/gview?url=http://publimotos.com/app/pdf/pm128.pdf&embedded=true" width="100%"  height="100%" id="viewpdf">
+        
+    </iframe>
+    
+</div>
+
+
+
+
+
+<!-- <button type="button" data-icon="gear" data-iconpos="right" data-mini="true" data-inline="true" onclick="descargarpdf()" id="jjj">jjjjjj</button>
+
+<iframe src="http://docs.google.com/gview?url=http://publimotos.com/app/pdf/pm128.pdf&embedded=true" width="100%"  height="540px"></iframe>
+
+
+<script type="text/javascript">
+function descargarpdf() {
+window.open('http://publimotos.com/app/pdf/pm128.pdf', '_blank', 'location=yes');
+}; 
+</script> -->
+
+  
+</div>
+   <!-- /page -->
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+     <script src="js/funciones.js"></script>
+
+    <script>
+        $( document ).on( "pagecreate", function() {
+            $( "body > [data-role='panel']" ).panel();
+            $( "body > [data-role='panel'] [data-role='listview']" ).listview();
+
+        });
+        $( document ).one( "pageshow", function() {
+            $( "body > [data-role='header']" ).toolbar();
+            $( "body > [data-role='header'] [data-role='navbar']" ).navbar();
+
+        });
+    </script>
+    <!-- <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script> -->
+</body>
+
+</html>
